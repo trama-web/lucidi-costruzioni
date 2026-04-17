@@ -5138,4 +5138,33 @@ a.go-top:hover {
   }
 }
 
+/* ---- mobile loader centering fix ---- */
+@media (max-width: 767px) {
+  .ip-header {
+    min-height: 100vh;
+  }
+  .ip-logo {
+    margin: 0;
+    padding: 0;
+    top: 50%;
+    height: auto;
+    transform: translate3d(0, -50%, 0);
+  }
+  .ip-logo img {
+    max-width: 60vw;
+  }
+  .ip-loader {
+    bottom: 15%;
+  }
+  .loaded .ip-logo {
+    animation: animLoadedLogoMobile 1s cubic-bezier(0.7, 0, 0.3, 1) forwards;
+  }
+  @keyframes animLoadedLogoMobile {
+    to {
+      transform: translate3d(0, 50%, 0) scale3d(0.65, 0.65, 1);
+      opacity: 0;
+    }
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
