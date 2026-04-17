@@ -590,11 +590,14 @@ ul.sub-menu li a:hover {
 .ip-header {
   position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 99999;
   min-height: 480px;
   width: 100%;
   height: 100%;
   background: #242424;
+  overflow: hidden;
 }
 
 .ip-header h1 {
