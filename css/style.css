@@ -623,6 +623,8 @@ ul.sub-menu li a:hover {
 
 .ip-logo img {
   max-width: 250px;
+  /* compensate PNG right-padding asymmetry so visible content appears centered */
+  transform: translateX(15.82%);
 }
 
 .ip-loader {
@@ -5160,7 +5162,6 @@ a.go-top:hover {
   .ip-logo img {
     max-width: 60vw;
     display: block;
-    /* compensate PNG right-padding asymmetry (content occupies left ~68% of canvas) */
     transform: translateX(12%);
   }
   .ip-loader {
