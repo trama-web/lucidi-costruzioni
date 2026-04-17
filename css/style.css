@@ -5147,24 +5147,45 @@ a.go-top:hover {
     min-height: 100vh;
   }
   .ip-logo {
-    margin: 0;
-    padding: 0;
-    top: 50%;
-    height: auto;
-    transform: translate3d(0, -50%, 0);
+    left: 50% !important;
+    right: auto !important;
+    top: 50% !important;
+    width: auto !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    text-align: center;
+    transform: translate3d(-50%, -50%, 0);
   }
   .ip-logo img {
     max-width: 60vw;
+    display: block;
   }
   .ip-loader {
-    bottom: 15%;
+    left: 50% !important;
+    right: auto !important;
+    width: auto !important;
+    bottom: 15% !important;
+    transform: translateX(-50%);
+  }
+  .ip-loader .ip-inner {
+    margin: 0 !important;
   }
   .loaded .ip-logo {
     animation: animLoadedLogoMobile 1s cubic-bezier(0.7, 0, 0.3, 1) forwards;
   }
+  .loaded .ip-loader {
+    animation: animLoadedLoaderMobile 0.5s cubic-bezier(0.7, 0, 0.3, 1) forwards;
+  }
   @keyframes animLoadedLogoMobile {
     to {
-      transform: translate3d(0, 50%, 0) scale3d(0.65, 0.65, 1);
+      transform: translate3d(-50%, 0, 0) scale3d(0.65, 0.65, 1);
+      opacity: 0;
+    }
+  }
+  @keyframes animLoadedLoaderMobile {
+    to {
+      transform: translate3d(-50%, -100%, 0) scale3d(0.3, 0.3, 1);
       opacity: 0;
     }
   }
