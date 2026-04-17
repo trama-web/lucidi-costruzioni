@@ -5171,6 +5171,19 @@ a.go-top:hover {
   .ip-loader .ip-inner {
     margin: 0 !important;
   }
+  .loading .ip-logo,
+  .loading .ip-loader {
+    animation: animInitialHeaderMobile 1s cubic-bezier(0.7, 0, 0.3, 1) both;
+  }
+  .loading .ip-loader {
+    animation-delay: 0.2s;
+  }
+  @keyframes animInitialHeaderMobile {
+    from {
+      opacity: 0;
+      transform: translate3d(-50%, 800px, 0);
+    }
+  }
   .loaded .ip-logo {
     animation: animLoadedLogoMobile 1s cubic-bezier(0.7, 0, 0.3, 1) forwards;
   }
