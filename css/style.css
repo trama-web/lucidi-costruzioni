@@ -5149,7 +5149,7 @@ a.go-top:hover {
   .ip-logo {
     left: 50% !important;
     right: auto !important;
-    top: 50% !important;
+    top: 44% !important;
     width: auto !important;
     height: auto !important;
     margin: 0 !important;
@@ -5160,11 +5160,14 @@ a.go-top:hover {
   .ip-logo img {
     max-width: 60vw;
     display: block;
+    /* compensate PNG right-padding asymmetry (content occupies left ~68% of canvas) */
+    transform: translateX(12%);
   }
   .ip-loader {
     left: 50% !important;
     right: auto !important;
     width: auto !important;
+    top: auto !important;
     bottom: 15% !important;
     transform: translateX(-50%);
   }
